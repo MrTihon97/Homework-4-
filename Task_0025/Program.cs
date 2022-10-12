@@ -6,14 +6,18 @@
 
 System.Console.WriteLine("Введите целое число A: ");
 int a = Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine("Введите целое число B: ");
+System.Console.WriteLine("Введите целое положительное число B: ");
 int b = Convert.ToInt32(Console.ReadLine());
 
 int b2 = b;
 int a2 = a;
+if (a>0 && b>0)
+{
 while (b > 1)
 {
     b = b - 1;
     a = a * a2;
 }
 Console.WriteLine($"{a2} в степени {b2} = {a}");
+}
+else Console.Write("Не целые положительные числа");
