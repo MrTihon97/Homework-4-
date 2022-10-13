@@ -9,7 +9,7 @@ int [] FillArray (int num)
     int [] array = new int [num];
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = new Random().Next(1 , 99);
+        array[i] = new Random().Next(1 , 50);
     
     }
     return array;
@@ -18,8 +18,9 @@ void PrintArray(int[] arr)
 {
     for (int i = 0; i < arr.Length; i++)
     {
-        Console.Write (($"{arr[i]},"));
+        Console.Write (($"[{arr[i]},] "));
     }
 }
+
 int[] myArr = FillArray(8);
 PrintArray(myArr);

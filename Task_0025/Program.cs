@@ -4,20 +4,24 @@
 
 // 2, 4 -> 16
 
-System.Console.WriteLine("Введите целое число A: ");
-int a = Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine("Введите целое положительное число B: ");
-int b = Convert.ToInt32(Console.ReadLine());
+int Degree(int A, int B)
+{
+    int result = 1;
+    for (int index = 1; index <= B; index++)
+    {
+        result = result * A;
+    }
+    return result;
+}
 
-int b2 = b;
-int a2 = a;
-if (a>0 && b>0)
+Console.Write("Введите число A: ");
+int A = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите число B: ");
+int B = Convert.ToInt32(Console.ReadLine());
+
+int degree = Degree(A, B);
+if (A>0 && B>0)
 {
-while (b > 1)
-{
-    b = b - 1;
-    a = a * a2;
+Console.WriteLine($"Ответ:{degree}");
 }
-Console.WriteLine($"{a2} в степени {b2} = {a}");
-}
-else Console.Write("Не целые положительные числа");
+else Console.Write("Не целые положительные числа или ноль");
